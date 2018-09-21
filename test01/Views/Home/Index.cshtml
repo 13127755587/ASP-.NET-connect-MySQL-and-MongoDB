@@ -1,0 +1,32 @@
+﻿@using test01.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <h1>Critical Design Parameters</h1>
+    @model List<OOO_ConfDataClass>
+       <table class="table table-bordered">
+           <thead>
+               <tr>
+                   <th>ID</th>
+                   <th>Voltage_low</th>
+                   <th>Voltage_High</th>
+                   <th>Threshold_High</th>
+                   <th>Threshold_Low</th>
+               </tr>
+           </thead>
+           <tbody>
+               @foreach (var item in Model)
+               {
+                   <tr>
+                       <td>@item.Id</td>
+                       <td>@item.voltage_low</td>
+                       <td>@item.voltage_high</td>
+                       <td>@item.threshhold_high</td>
+                       <td>@item.threshhold_low</td>
+                    </tr>
+               }
+           </tbody>
+       </table>
+</div>
